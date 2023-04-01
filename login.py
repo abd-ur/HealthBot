@@ -1,3 +1,4 @@
+import streamlit as st
 USERS = {
     'alice': 'password123',
     'bob': 'pass123',
