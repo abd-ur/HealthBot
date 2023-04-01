@@ -11,5 +11,4 @@ def login():
             st.success('Logged in as {}'.format(username))
         else:
             st.error('Invalid username or password')
-if __name__ == '__main__':
-    login()
+login()
