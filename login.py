@@ -17,4 +17,4 @@ inp=st.text_input("You:","")
 if st.button("Send"):
     res=match(inp)
     st.text_area("Bot:",res)
-    st.text_input("You:","")
+    st.text_input("You:","",value='')
