@@ -1,15 +1,16 @@
 import streamlit as st
-
-# Define the options for the selectbox
-options = ["Home", "Page 1", "Page 2"]
-
-# Create a sidebar with the selectbox
-selection = st.sidebar.selectbox("Go to", options)
-
-# Show the appropriate content based on the selected option
-if selection == "Home":
-    st.write("This is the home page.")
-elif selection == "Page 1":
-    st.write("This is page 1.")
-elif selection == "Page 2":
-    st.write("This is page 2.")
+    
+st.title('Login')
+    
+     USERS = {
+    'alice': 'password123',
+    'bob': 'pass123',
+    'charlie': 'password'}
+st.write('Please log in')
+us=st.text_input('Username')
+pas=st.text_input('Password',type='password')
+if st.button('Log in'):
+    if us in USERS and pas==USERS[us]:
+        st.write('Welcome : ',us)
+    else:
+        st.error('Invalid credentials')
