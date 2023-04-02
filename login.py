@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 usr=''
 ph=st.empty()
 records={'alice':None,'bob':None}
@@ -16,10 +17,12 @@ def login():
           if st.button('Log in'):
               if us in USERS and pas==USERS[us]:
                   ph.empty()
-                  return us
+                  time.sleep(4)
+                  st.success('Welcome :',usr)
+                  
               else:
                   st.error('Invalid credentials, try again.')
 if st.button('Sign in'):
   usr=login()
-if usr != '':
-  st.success('Welcome :',usr)
+
+  
