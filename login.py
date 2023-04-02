@@ -30,6 +30,7 @@ def checkup(x):
     st.success('Your records are saved.')
     x[alice]=age,gen
 usr=login()
-st.write(usr,'lets check') 
-checkup(records)
-print(records[usr])
+st.write(usr) 
+if st.button('Lets check'):
+    checkup(records)
+    print(records[usr])
