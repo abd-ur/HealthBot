@@ -1,17 +1,20 @@
 import streamlit as st
-
-placeholder = st.empty()
-
-# Replace the placeholder with some text:
-placeholder.text("Hello")
-
-# Replace the text with a chart:
-placeholder.line_chart({"data": [1, 5, 2, 6]})
-
-# Replace the chart with several elements:
-with placeholder.container():
-    st.write("This is one element")
-    st.write("This is another")
-
-# Clear all those elements:
-#placeholder.empty()
+ph=st.empty()
+while(1):
+    with ph.container():
+        st.title('Login')
+        USERS = {
+                'alice': 'password123',
+                'bob': 'pass123',
+                'charlie': 'password'}
+        st.write('Please log in')
+        us=st.text_input('Username')
+        pas=st.text_input('Password',type='password')
+        if st.button('Log in'):
+            if us in USERS and pas==USERS[us]:
+                ph.empty()
+                break
+            else:
+                st.error('Invalid credentials')
+            
+st.write('welcome')            
