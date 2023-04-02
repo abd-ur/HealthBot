@@ -33,11 +33,10 @@ def check():
               st.write('Blood Pressure :',bp)
               import pandas as p
               pip3 install scikit-learn
-              data=open('diabetes.csv')
-              from sklearn import linear_model
-              mod=linear_model.LinearRegression()
-              mod.fit(data.drop('Outcome',axis='columns'),data['Outcome'])
-              st.write(round(mod.predict([[89,60,95,28.3,20]])[0]))
+              with open('mod_pkl') as d:
+                 srg=pickle.load(d)
+                 st.write(srg.predict([[glu,bp,ins,bmi,age]]))
+              
 
                 
       time.sleep(30)
