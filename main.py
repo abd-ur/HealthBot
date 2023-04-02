@@ -35,7 +35,7 @@ def check():
               with open('utf-8-mod_pkl.htm') as d:
                  srg=pickle.load(d)
                  st.write(srg.predict([[glu,bp,ins,bmi,age]]))
-       time.sleep(30)
+              time.sleep(30)
 inp=st.text_input("You:","")
 if st.button("Send"): 
     res=match(inp)
