@@ -22,10 +22,6 @@ def login():
                   
               else:
                   st.error('Invalid credentials, try again.')
-with ph.container():
-  
-  if st.button('Sign in'):
-    ph.empty
-    usr=login()
+login()
 
   
