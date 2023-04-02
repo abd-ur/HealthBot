@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.cli
 def login():   
   while(1):
     st.title('Login')
@@ -11,24 +12,9 @@ def login():
     pas=st.text_input('Password',type='password')
     if st.button('Log in'):
         if us in USERS and pas==USERS[us]:
-            return us
+            streamlit.cli._cleanup_on_error()
+            st.write('welcome alice')
             break
         else:
             st.error('Invalid credentials, try again.')
 
-
-# Define the options for the selectbox
-options = ["Home", "Login", "Alice",'Bob']
-
-# Create a sidebar with the selectbox
-selection = st.sidebar.selectbox("Go to",options)
-
-# Show the appropriate content based on the selected option
-if selection == "Home":
-    st.write("This is the home page.")
-elif selection == "Login":
-    st.write(login())
-if selection=='Alice':
-  st.write('welcome alice')
-elif selection=='Bob':
-  st.write('welcome bob')
