@@ -21,8 +21,6 @@ def check():
           bp=st.number_input("Enter your Upper Blood Pressure",min_value=50,max_value=220)
           if st.button('Submit'):
               st.success('Your records are saved.')
-              time.sleep(2)
-              ph.empty()
               st.write('Age :',age,'\nGender :',gen,'\nBody mass index :',bmi,'\nInsulin :',ins,'\nGlucose :',glu,'\nBlood Pressure :',bp)
 def match(inp):
     for key in rules:
