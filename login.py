@@ -22,12 +22,12 @@ if st.button("Send"):
     st.text_area("LIFE:",res)
     if res=='Alright then we will proceed':
       age=st.number_input("Enter your Age",min_value=0,max_value=150)
-          gen=st.radio("Select your Gender",["Male","Female"])
-          bmi=st.number_input("Enter your Body Mass Index",min_value=9,max_value=50)
-          ins=st.number_input("Enter your recently diagnosed Insulin Level",max_value=300)
-          glu=st.number_input("Enter your recently diagnosed Glucose Level",min_value=60,max_value=200)
-          bp=st.number_input("Enter your Upper Blood Pressure",min_value=50,max_value=220)
-          if st.button('Submit'):
+      gen=st.radio("Select your Gender",["Male","Female"])
+      bmi=st.number_input("Enter your Body Mass Index",min_value=9,max_value=50)
+      ins=st.number_input("Enter your recently diagnosed Insulin Level",max_value=300)
+      glu=st.number_input("Enter your recently diagnosed Glucose Level",min_value=60,max_value=200)
+      bp=st.number_input("Enter your Upper Blood Pressure",min_value=50,max_value=220)
+      if st.button('Submit'):
               st.success('Your records are saved.')
               st.write('Age :',age,'\nGender :',gen,'\nBody mass index :',bmi,'\nInsulin :',ins,'\nGlucose :',glu,'\nBlood Pressure :',bp)
       res=''
