@@ -32,9 +32,9 @@ def checkup(x,us):
 def main():
     usr=''
     usr=login()
-    if usr!=''
-    st.write(usr,'lets check')
+    if usr!='':
+        st.write(usr,'lets check')
 
-    if st.button('Checkup'):
-        checkup(records,usr)
+        if st.button('Checkup'):
+            checkup(records,usr)
 main()    
