@@ -1,6 +1,5 @@
 import streamlit as st
 import random
-@st.cache
 ph=st.empty()
 st.title("Hi I am LIFE, your personal health care assistant. You can start chatting.")
 rules={
@@ -12,7 +11,7 @@ rules={
     'no':['Ok we will take it on someother time.'],
     "bye": ["Goodbye, Take care", "Bye!"],
     "default": ["Sorry, I could'nt understand."]}      
-          
+@st.cache       
 def match(inp):
     for key in rules:
         if key in inp:
