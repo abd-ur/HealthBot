@@ -1,4 +1,5 @@
 import streamlit as st
+usr=''
 ph=st.empty()
 records={'alice':None,'bob':None}
 def login():
@@ -20,5 +21,5 @@ def login():
                   st.error('Invalid credentials, try again.')
 if st.button('Sign in'):
   usr=login()
-if usr!='':
+if usr != '':
   st.success('Welcome :',usr)
