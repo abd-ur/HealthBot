@@ -2,6 +2,11 @@ import streamlit as st
 import time
 usr=''
 ph=st.empty()
+rules={
+    "hi": ["Hello!", "Hi there!", "Hey!"],
+    "bye": ["Goodbye!", "Bye!", "See you later!"],
+    "default": ["I'm sorry, I didn't understand.", "Can you please rephrase that?", "Could you say that again?"]
+}
 records={'alice':None,'bob':None}
 with ph.container():
           st.title('Login')
@@ -14,9 +19,14 @@ with ph.container():
           pas=st.text_input('Password',type='password')
           if st.button('Log in'):
               if us in USERS and pas==USERS[us]:
-                  st.success('Logged in')
-                  time.sleep(2)
+                  st.success('Logging in')
+                  time.sleep(3)
                   ph.empty()
+                  st.title("Hi I am LIFE, your personal healthcare assistant. You can start chatting.")
+                  inp=st.text_input("You:","")
+                  if st.button("Send"):
+                    res=rules(inp)
+                    st.text_area("Life:",res)
                   
 
                   
