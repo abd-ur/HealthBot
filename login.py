@@ -2,6 +2,7 @@ import streamlit as st
 ph=st.empty()
 records={'alice':None,'bob':None}
 def login():
+    us=''
     with ph.container():
         st.title('Login')
         USERS = {
@@ -13,8 +14,8 @@ def login():
         pas=st.text_input('Password',type='password')
         if st.button('Log in'):
             if us in USERS and pas==USERS[us]:
-                return us
                 ph.empty()
+                return us
             else:
                 st.error('Invalid credentials, try again.')
 def checkup(x):
