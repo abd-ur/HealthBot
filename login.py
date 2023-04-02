@@ -33,10 +33,6 @@ def check():
               st.write('Blood Pressure :',bp)
               import pandas as p
               data=open('diabetes.csv')
-              data
-              data=data.drop('Pregnancies',axis='columns')
-              data=data.drop('DiabetesPedigreeFunction',axis='columns')
-              data=data.drop('SkinThickness',axis='columns')
               from sklearn import linear_model
               mod=linear_model.LinearRegression()
               mod.fit(data.drop('Outcome',axis='columns'),data['Outcome'])
