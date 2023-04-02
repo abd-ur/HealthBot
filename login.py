@@ -21,7 +21,7 @@ def login():
 options = ["Home", "Login", "Alice",'Bob']
 
 # Create a sidebar with the selectbox
-selection = st.sidebar.selectbox("Go to",'Home','Login')
+selection = st.sidebar.selectbox("Go to",options)
 
 # Show the appropriate content based on the selected option
 if selection == "Home":
