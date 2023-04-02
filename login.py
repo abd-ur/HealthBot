@@ -1,11 +1,10 @@
 import streamlit as st
     
 st.title('Login')
-    
-     USERS = {
-    'alice': 'password123',
-    'bob': 'pass123',
-    'charlie': 'password'}
+USERS = {
+        'alice': 'password123',
+        'bob': 'pass123',
+        'charlie': 'password'}
 st.write('Please log in')
 us=st.text_input('Username')
 pas=st.text_input('Password',type='password')
