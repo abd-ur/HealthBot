@@ -15,7 +15,6 @@ def match(inp):
     for key in rules:
         if key in inp:
           return random.choice(rules[key])
-@st.cache
 def check():
       age=st.number_input("Enter your Age",min_value=0,max_value=150)
       gen=st.radio("Select your Gender",["Male","Female"])
