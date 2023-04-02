@@ -27,7 +27,7 @@ selection = st.sidebar.selectbox("Go to",options)
 if selection == "Home":
     st.write("This is the home page.")
 elif selection == "Login":
-    selection=login()
+    print(login())
 if selection=='Alice':
   st.write('welcome alice')
 elif selection=='Bob':
