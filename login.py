@@ -31,8 +31,7 @@ def check():
               st.write('Insulin level :',ins)
               st.write('Glucose level :',glu)
               st.write('Blood Pressure :',bp)
-              import pandas as p
-              pip3 install scikit-learn
+              import pickle
               with open('mod_pkl') as d:
                  srg=pickle.load(d)
                  st.write(srg.predict([[glu,bp,ins,bmi,age]]))
