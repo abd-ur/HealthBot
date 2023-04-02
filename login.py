@@ -25,7 +25,13 @@ def check():
       bp=st.number_input("Enter your Upper Blood Pressure",min_value=50,max_value=220)
       if st.button('Submit'):
               st.success('Your records are saved.')
-              st.write('Age :',age,'\nGender :',gen,'\nBody mass index :',bmi,'\nInsulin :',ins,'\nGlucose :',glu,'\nBlood Pressure :',bp)
+              st.write('Age :',age)
+              st.write('Gender :',age)
+              st.write('Body Mass Index :',age)
+              st.write('Insulin level :',age)
+              st.write('Blood Pressure :',age)
+            
+              
       time.sleep(30)
 inp=st.text_input("You:","")
 if st.button("Send"):
