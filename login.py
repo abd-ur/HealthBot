@@ -13,7 +13,7 @@ def login():
         pas=st.text_input('Password',type='password')
         if st.button('Log in'):
             if us in USERS and pas==USERS[us]:
-                st.write('yes')  
+                return us  
             else:
                 st.error('Invalid credentials, try again.')
 def checkup(x):
@@ -27,7 +27,8 @@ def checkup(x):
   if st.button('Submit'):
     st.success('Your records are saved.')
     x[alice]=age,gen
-login()
+usr=login()
+st.write(usr)
 #usr=login() 
 #ph.empty()
 #st.title('Welcome', usr,'lets check') 
