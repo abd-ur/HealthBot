@@ -13,10 +13,10 @@ with ph.container():
         pas=st.text_input('Password',type='password')
         if st.button('Log in'):
             if us in USERS and pas==USERS[us]:
-                st.write('done',us)
+                ph.empty()
             else:
                 st.error('Invalid credentials, try again.')
-ph.empty()
+
 def checkup(x,us):
   age=st.number_input("Enter your Age",min_value=0,max_value=150)
   gen=st.radio("Select your Gender",["Male","Female"])
@@ -28,4 +28,4 @@ def checkup(x,us):
     st.success('Your records are saved.')
     x[us]=age,gen
     print(x[usr])
-    
+st.write('welcome',us)    
