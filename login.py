@@ -34,13 +34,13 @@ def check():
               import pandas as p
               data=open('diabetes.csv')
               data=p.DataFrame(data)
-              data=data.drop('Pregnancies',axis='columns')
-              data=data.drop('DiabetesPedigreeFunction',axis='columns')
-              data=data.drop('SkinThickness',axis='columns')
-              from sklearn import linear_model
-              mod=linear_model.LinearRegression()
-              mod.fit(data.drop('Outcome',axis='columns'),data['Outcome'])
-              st.write(round(mod.predict([[89,60,95,28.3,20]])[0]))
+     #         data=data.drop('Pregnancies',axis='columns')
+      #        data=data.drop('DiabetesPedigreeFunction',axis='columns')
+      #        data=data.drop('SkinThickness',axis='columns')
+      #        from sklearn import linear_model
+      #        mod=linear_model.LinearRegression()
+      #        mod.fit(data.drop('Outcome',axis='columns'),data['Outcome'])
+              st.write(data)
       time.sleep(30)
 inp=st.text_input("You:","")
 if st.button("Send"):
