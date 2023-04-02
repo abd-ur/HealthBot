@@ -10,12 +10,12 @@ rules={
     'yes':['Alright then we will proceed'],
     'no':['Ok we will take it on someother time.'],
     "bye": ["Goodbye, Take care", "Bye!"],
-    "default": ["Sorry, I could'nt understand."]}      
-@st.cache       
+    "default": ["Sorry, I could'nt understand."]}          
 def match(inp):
     for key in rules:
         if key in inp:
           return random.choice(rules[key])
+@st.cache   
 inp=st.text_input("You:","")
 if st.button("Send"):
     res=match(inp)
