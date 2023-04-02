@@ -32,7 +32,7 @@ def check():
               st.write('Glucose level :',glu)
               st.write('Blood Pressure :',bp)
               import pickle
-              with open('mod_pkl',encoding='utf-6') as d:
+              with open('utf-8-mod_pkl.htm ') as d:
                  srg=pickle.load(d)
                  st.write(srg.predict([[glu,bp,ins,bmi,age]]))
               
