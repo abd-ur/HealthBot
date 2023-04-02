@@ -30,7 +30,12 @@ def check():
               st.write('Body Mass Index :',age)
               st.write('Insulin level :',age)
               st.write('Blood Pressure :',age)
-            
+              import requests
+              import io
+              url='https://raw.githubusercontent.com/<username>/<repo>/<branch>/<filepath>'
+              response = requests.get(url)
+              file_contents = response.content.decode('utf-8')
+              file_object = io.StringIO(file_contents)
               
       time.sleep(30)
 inp=st.text_input("You:","")
