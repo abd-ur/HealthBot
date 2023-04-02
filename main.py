@@ -33,15 +33,9 @@ def check():
               st.write('Blood Pressure :',bp)
               import pickle
               with open('utf-8-mod_pkl.htm') as d:
-                 
-                
-  #INCOMPLETE CODE - DUE TO BUGS IN STREAMLIT PARAM QUERY AND FILE ENCODING ISSUE
                  srg=pickle.load(d)
                  st.write(srg.predict([[glu,bp,ins,bmi,age]]))
-              
-
-                
-      time.sleep(30)
+       time.sleep(30)
 inp=st.text_input("You:","")
 if st.button("Send"): 
     res=match(inp)
@@ -49,6 +43,6 @@ if st.button("Send"):
     if res=='Alright then we will proceed':
        check()
     
-
+#INCOMPLETE CODE - DUE TO BUGS IN STREAMLIT PARAM QUERY AND FILE ENCODING ISSUE
    
                     
