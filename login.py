@@ -17,8 +17,9 @@ def login():
           if st.button('Log in'):
               if us in USERS and pas==USERS[us]:
                   ph.empty()
-                  time.sleep(4)
                   st.success('Welcome :',usr)
+
+                  
                   
               else:
                   st.error('Invalid credentials, try again.')
