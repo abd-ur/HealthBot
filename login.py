@@ -9,7 +9,6 @@ rules={
     "hi": ["Hello", "Hi"],
     "bye": ["Goodbye, Take care", "Bye!"],
     "default": ["Sorry, I could'nt understand."]
-
 inp=st.text_input("You:","")
 if st.button("Send"):
     res=match(inp)
