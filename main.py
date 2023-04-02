@@ -35,14 +35,14 @@ def check():
               with open('utf-8-mod_pkl.htm') as d:
                  srg=pickle.load(d)
                  st.write(srg.predict([[glu,bp,ins,bmi,age]]))
-              time.sleep(30)
+              
 inp=st.text_input("You:","")
 if st.button("Send"): 
     res=match(inp)
     st.text_area("LIFE:",res)
     if res=='Alright then we will proceed':
        check()
-    
+       time.sleep(30)
 #INCOMPLETE CODE - DUE TO BUGS IN STREAMLIT PARAM QUERY AND FILE ENCODING ISSUE
    
                     
