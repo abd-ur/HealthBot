@@ -8,4 +8,4 @@ def main():
         # but keeps the footer
         st.experimental_set_query_params()
 
-
+main()
