@@ -1,4 +1,5 @@
 import streamlit as st
+@st.cache
 import random
 ph=st.empty()
 st.title("Hi I am LIFE, your personal health care assistant. You can start chatting.")
