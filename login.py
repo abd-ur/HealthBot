@@ -26,16 +26,21 @@ def check():
       if st.button('Submit'):
               st.success('Your records are saved.')
               st.write('Age :',age)
-              st.write('Gender :',age)
-              st.write('Body Mass Index :',age)
-              st.write('Insulin level :',age)
-              st.write('Blood Pressure :',age)
+              st.write('Gender :',gen)
+              st.write('Body Mass Index :',bmi)
+              st.write('Insulin level :',ins)
+              st.write('Glucose level :',glu)
+              st.write('Blood Pressure :',bp)
               import requests
               import io
-              url='https://raw.githubusercontent.com/<username>/<repo>/<branch>/<filepath>'
+              url='https://github.com/mangekkyo/testApp/blob/main/mod_pkl'
               response = requests.get(url)
               file_contents = response.content.decode('utf-8')
-              file_object = io.StringIO(file_contents)
+              model = io.StringIO(file_contents)
+              import pickle
+              with open('model','rb') as d:
+                srg=pickle.load(d)
+                st.write(srg.predict([[glu,bp,ins,bmi,age]]))
               
       time.sleep(30)
 inp=st.text_input("You:","")
