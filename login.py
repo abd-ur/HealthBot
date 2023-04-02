@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.cli
 def login():   
   while(1):
     st.title('Login')
@@ -12,9 +11,10 @@ def login():
     pas=st.text_input('Password',type='password')
     if st.button('Log in'):
         if us in USERS and pas==USERS[us]:
-            streamlit.cli._cleanup_on_error()
-            st.write('welcome alice')
-            break
+           st.empty()
+           time.sleep(0.1)
+           st.write('welcome alice')
+           break
         else:
             st.error('Invalid credentials, try again.')
 
