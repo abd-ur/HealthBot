@@ -32,11 +32,16 @@ def check():
               st.write('Glucose level :',glu)
               st.write('Blood Pressure :',bp)
               import pandas as p
-              import pickle
-              model=open('mod_pkl')
-              with open('model','rb') as d:
-                srg=pickle.load(d)
-                st.write(srg.predict([[glu,bp,ins,bmi,age]]))
+              data=open('diabetes.csv')
+              data
+              data=data.drop('Pregnancies',axis='columns')
+              data=data.drop('DiabetesPedigreeFunction',axis='columns')
+              data=data.drop('SkinThickness',axis='columns')
+              from sklearn import linear_model
+              mod=linear_model.LinearRegression()
+              mod.fit(data.drop('Outcome',axis='columns'),data['Outcome'])
+              st.write(round(mod.predict([[89,60,95,28.3,20]])[0]))
+
                 
       time.sleep(30)
 inp=st.text_input("You:","")
