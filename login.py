@@ -6,7 +6,7 @@ rules={
     'checkup':['Shall we start your diabetes diagnosis?','Ok then, we will begin your diagnosis then.']
     'diabetes':['Shall we start your diabetes diagnosis?','Ok then, we will begin your diagnosis then.']
     'sugar':['Would you like to go for a quick diagnosis?']
-    'no':['Ok we will take it on someother time.]
+    'no':['Ok we will take it on someother time.']
     "bye": ["Goodbye, Take care", "Bye!"],
     "default": ["Sorry, I could'nt understand."]}
 def match(inp):
