@@ -31,7 +31,7 @@ def checkup(x,us):
     print(x[usr])
 usr=login()
 st.write(usr) 
-if usr.contains():
+if usr!='':
     if st.button('Lets check'):
         checkup(records,usr)
     
