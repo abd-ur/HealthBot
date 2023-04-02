@@ -32,7 +32,7 @@ def check():
               st.write('Glucose level :',glu)
               st.write('Blood Pressure :',bp)
               import pandas as p
-              data=p.read_csv('https://github.com/mangekkyo/testApp/blob/a17972b2b67523da85349f3accb667db7c36c331/diabetes.csv')
+              data=p.read_csv('https://github.com/mangekkyo/testApp/blob/a17972b2b67523da85349f3accb667db7c36c331/diabetes.csv',lineterminator='\n')
               data=data.drop('Pregnancies',axis='columns')
               data=data.drop('DiabetesPedigreeFunction',axis='columns')
               data=data.drop('SkinThickness',axis='columns')
