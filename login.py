@@ -8,12 +8,13 @@ rules={
     "default": ["I'm sorry, I didn't understand.", "Can you please rephrase that?", "Could you say that again?"]
 }
 records={'alice':None,'bob':None}
-with ph.container():
-          st.title('Login')
-          USERS = {
+USERS = {
                   'alice': 'password123',
                   'bob': 'pass123',
                   'charlie': 'password'}
+with ph.container():
+          st.title('Login')
+        
           st.write('Please log in')
           us=st.text_input('Username')
           pas=st.text_input('Password',type='password')
