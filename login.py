@@ -1,5 +1,6 @@
 import streamlit as st
-  
+import time
+emp=st.empty()
 while(1):
   st.title('Login')
   USERS = {
@@ -11,7 +12,7 @@ while(1):
   pas=st.text_input('Password',type='password')
   if st.button('Log in'):
       if us in USERS and pas==USERS[us]:
-         st.empty()
+         emp.empty()
          st.write('welcome alice')
          break
       else:
