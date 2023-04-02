@@ -32,6 +32,7 @@ def check():
               st.write('Glucose level :',glu)
               st.write('Blood Pressure :',bp)
               import pandas as p
+              import pickle
               model=open('mod_pkl')
               with open('model','rb') as d:
                 srg=pickle.load(d)
