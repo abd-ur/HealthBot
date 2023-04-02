@@ -33,7 +33,7 @@ def check():
               st.write('Blood Pressure :',bp)
               import pandas as p
               model=open('mod_pkl')
-              with open('moedl','rb') as d:
+              with open('model','rb') as d:
                 srg=pickle.load(d)
                 st.write(srg.predict([[glu,bp,ins,bmi,age]]))
                 
