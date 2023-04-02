@@ -1,6 +1,6 @@
 import streamlit as st
-@st.cache
 import random
+@st.cache
 ph=st.empty()
 st.title("Hi I am LIFE, your personal health care assistant. You can start chatting.")
 rules={
