@@ -1,9 +1,8 @@
 import streamlit as st
 ph=st.empty()
 records={'alice':None,'bob':None}
-def login():
-    us=''
-    with ph.container():
+us=''
+with ph.container():
         st.title('Login')
         USERS = {
                 'alice': 'password123',
@@ -15,7 +14,7 @@ def login():
         if st.button('Log in'):
             if us in USERS and pas==USERS[us]:
                 ph.empty()
-                return us
+                st.write('done')
             else:
                 st.error('Invalid credentials, try again.')
 def checkup(x,us):
@@ -29,12 +28,4 @@ def checkup(x,us):
     st.success('Your records are saved.')
     x[us]=age,gen
     print(x[usr])
-def main():
-    usr=''
-    usr=login()
-    if usr!='':
-        st.write(usr,'lets check')
-
-        if st.button('Checkup'):
-            checkup(records,usr)
-main()    
+    
