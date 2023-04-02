@@ -33,6 +33,6 @@ usr=''
 usr=login()
 st.write(usr) 
 if usr!='':
-    if st.button('Lets check'):
+    st.button('Lets check'):
         checkup(records,usr)
     
