@@ -1,19 +1,28 @@
 import streamlit as st
-import time
-emp=st.empty()
-while(1):
-  st.title('Login')
-  USERS = {
-            'alice': 'password123',
-            'bob': 'pass123',
-            'charlie': 'password'}
-  emp.write('Please log in')
-  us=emp.text_input('Username')
-  pas=emp.text_input('Password',type='password')
-  if emp.button('Log in'):
-      if us in USERS and pas==USERS[us]:
-        st.write('new')
-   
-        break
-      else:
-          st.error('Invalid credentials, try again.')
+
+def login():
+    # Show the login form
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+    if st.button("Login"):
+        # Verify the login credentials
+        if username == "admin" and password == "123":
+            # Clear the login form and show the main screen
+            username = ""
+            password = ""
+            st.success("Logged in!")
+            main()
+        else:
+            st.error("Invalid username or password")
+
+def main():
+    # Show the main screen
+    st.write("Hello, world!")
+    if st.button("Logout"):
+        # Clear the main screen and show the login form
+        st.experimental_set_query_params()
+        login()
+
+if __name__ == '__main__':
+    # Start with the login form
+    login()
