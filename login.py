@@ -36,7 +36,7 @@ def check():
               url='https://github.com/mangekkyo/testApp/blob/main/mod_pkl'
               response = requests.get(url)
               file_contents = response.content.decode('utf-8')
-              model = io.StringIO(file_contents)
+              model = 'mod_pkl'
               import pickle
               with open('model','rb') as d:
                 srg=pickle.load(d)
