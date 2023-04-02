@@ -31,7 +31,8 @@ def check():
               st.write('Insulin level :',ins)
               st.write('Glucose level :',glu)
               st.write('Blood Pressure :',bp)
-              data='https://github.com/mangekkyo/testApp/blob/a17972b2b67523da85349f3accb667db7c36c331/diabetes.csv'
+              import pandas as p
+              data=pe.read_csv('https://github.com/mangekkyo/testApp/blob/a17972b2b67523da85349f3accb667db7c36c331/diabetes.csv')
               data=data.drop('Pregnancies',axis='columns')
               data=data.drop('DiabetesPedigreeFunction',axis='columns')
               data=data.drop('SkinThickness',axis='columns')
@@ -46,6 +47,7 @@ if st.button("Send"):
     st.text_area("LIFE:",res)
     if res=='Alright then we will proceed':
        check()
+    
 
    
                     
