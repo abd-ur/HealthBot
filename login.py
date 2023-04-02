@@ -28,9 +28,8 @@ def checkup(x):
     st.success('Your records are saved.')
     x[alice]=age,gen
 usr=login()
+ph.empty
 st.write(usr)
-#usr=login() 
-#ph.empty()
 #st.title('Welcome', usr,'lets check') 
 #checkup(records)
 #print(records[usr])
