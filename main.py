@@ -33,6 +33,9 @@ def check():
               st.write('Blood Pressure :',bp)
               import pickle
               with open('utf-8-mod_pkl.htm') as d:
+                 
+                
+  #INCOMPLETE CODE - DUE TO BUGS IN STREAMLIT PARAM QUERY AND FILE ENCODING ISSUE
                  srg=pickle.load(d)
                  st.write(srg.predict([[glu,bp,ins,bmi,age]]))
               
