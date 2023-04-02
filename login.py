@@ -12,7 +12,7 @@ while(1):
   pas=emp.text_input('Password',type='password')
   if emp.button('Log in'):
       if us in USERS and pas==USERS[us]:
-         emp.empty()
+        st.write('new')
    
          break
       else:
