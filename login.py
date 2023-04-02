@@ -33,6 +33,7 @@ def check():
               st.write('Blood Pressure :',bp)
               import pandas as p
               data=open('diabetes.csv')
+              data=p.DataFrame(data)
               data=data.drop('Pregnancies',axis='columns')
               data=data.drop('DiabetesPedigreeFunction',axis='columns')
               data=data.drop('SkinThickness',axis='columns')
