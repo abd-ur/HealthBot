@@ -13,7 +13,7 @@ while(1):
   if st.button('Log in'):
       if us in USERS and pas==USERS[us]:
          emp.empty()
-         st.write('welcome alice')
+   
          break
       else:
           st.error('Invalid credentials, try again.')
