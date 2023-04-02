@@ -22,8 +22,9 @@ def login():
                   
               else:
                   st.error('Invalid credentials, try again.')
-login()
+usr=login()
 if usr != '':
+  ph.empty()
   st.write('welcome',usr)
 
   
