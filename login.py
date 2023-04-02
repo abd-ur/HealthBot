@@ -11,17 +11,6 @@ rules={
     'no':['Ok we will take it on someother time.'],
     "bye": ["Goodbye, Take care", "Bye!"],
     "default": ["Sorry, I could'nt understand."]}
-def match(inp):
-    for key in rules:
-        if key in inp:
-          return random.choice(rules[key])
-inp=st.text_input("You:","")
-if st.button("Send"):
-    res=match(inp)
-    st.text_area("LIFE:",res)
-    if res=='Alright then we will proceed':
-      check()
-      res=''
 def check():        
         with ph.container():
           age=st.number_input("Enter your Age",min_value=0,max_value=150)
@@ -35,5 +24,17 @@ def check():
               time.sleep(2)
               ph.empty()
               st.write('Age :',age,'\nGender :',gen,'\nBody mass index :',bmi,'\nInsulin :',ins,'\nGlucose :',glu,'\nBlood Pressure :',bp)
+def match(inp):
+    for key in rules:
+        if key in inp:
+          return random.choice(rules[key])
+inp=st.text_input("You:","")
+if st.button("Send"):
+    res=match(inp)
+    st.text_area("LIFE:",res)
+    if res=='Alright then we will proceed':
+      check()
+      res=''
+
    
                     
