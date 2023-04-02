@@ -31,17 +31,14 @@ def check():
               st.write('Insulin level :',ins)
               st.write('Glucose level :',glu)
               st.write('Blood Pressure :',bp)
-              import requests
-              import io
-              url='https://github.com/mangekkyo/testApp/blob/main/mod_pkl'
-              response = requests.get(url)
-              file_contents = response.content.decode('utf-8')
-              model = 'mod_pkl'
-              import pickle
-              with open('model','rb') as d:
-                srg=pickle.load(d)
-                st.write(srg.predict([[glu,bp,ins,bmi,age]]))
-              
+              data='https://github.com/mangekkyo/testApp/blob/a17972b2b67523da85349f3accb667db7c36c331/diabetes.csv'
+              data=data.drop('Pregnancies',axis='columns')
+              data=data.drop('DiabetesPedigreeFunction',axis='columns')
+              data=data.drop('SkinThickness',axis='columns')
+              from sklearn import linear_model
+              mod=linear_model.LinearRegression()
+              mod.fit(data.drop('Outcome',axis='columns'),data['Outcome'])
+              st.write(round(mod.predict([[89,60,95,28.3,20]])[0]))
       time.sleep(30)
 inp=st.text_input("You:","")
 if st.button("Send"):
