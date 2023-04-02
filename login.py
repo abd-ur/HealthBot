@@ -17,4 +17,5 @@ def login():
            break
         else:
             st.error('Invalid credentials, try again.')
-
+         
+login()
