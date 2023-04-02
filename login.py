@@ -29,10 +29,9 @@ def checkup(x,us):
     st.success('Your records are saved.')
     x[us]=age,gen
     print(x[usr])
-usr=''
-usr=login()
-st.write(usr) 
-if usr!='':
-    st.button('Lets check'):
+def main():
+    usr=login()
+    st.write(usr,'lets check')
+    if st.button('Checkup'):
         checkup(records,usr)
-    
+main()    
