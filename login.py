@@ -1,5 +1,6 @@
 import streamlit as st
 import random
+import time
 ph=st.empty()
 st.title("Hi I am LIFE, your personal health care assistant. You can start chatting.")
 rules={
@@ -25,6 +26,7 @@ def check():
       if st.button('Submit'):
               st.success('Your records are saved.')
               st.write('Age :',age,'\nGender :',gen,'\nBody mass index :',bmi,'\nInsulin :',ins,'\nGlucose :',glu,'\nBlood Pressure :',bp)
+      time.sleep(30)
 inp=st.text_input("You:","")
 if st.button("Send"):
     res=match(inp)
