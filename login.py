@@ -3,7 +3,6 @@ import time
 usr=''
 ph=st.empty()
 records={'alice':None,'bob':None}
-  us=''
 if st.button('Go to Sign in'): 
   with ph.container():
           st.title('Login')
