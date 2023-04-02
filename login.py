@@ -31,7 +31,5 @@ if st.button("Send"):
       if st.button('Submit'):
               st.success('Your records are saved.')
               st.write('Age :',age,'\nGender :',gen,'\nBody mass index :',bmi,'\nInsulin :',ins,'\nGlucose :',glu,'\nBlood Pressure :',bp)
-      res=''
-
    
                     
