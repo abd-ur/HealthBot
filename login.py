@@ -17,9 +17,7 @@ def login():
                 return us
             else:
                 st.error('Invalid credentials, try again.')
-usr=login()           
-st.title('Welcome', usr) 
-def checkup():
+def checkup(x):
   name=st.text_input("Enter your Name")
   age=st.number_input("Enter your Age",min_value=0,max_value=150)
   gen=st.radio("Select your Gender",["Male","Female"])
@@ -29,4 +27,8 @@ def checkup():
 #  bp=st.number_input("Enter your Upper Blood Pressure",min_value=50,max_value=220)
   if st.button('Submit'):
     st.success('Your records are saved.')
-    records[alice]=age,gen
+    x[alice]=age,gen
+usr=login()           
+st.title('Welcome', usr,'lets check') 
+checkup(records)
+print(records[usr])
