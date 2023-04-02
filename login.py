@@ -14,7 +14,7 @@ def login():
         if st.button('Log in'):
             if us in USERS and pas==USERS[us]:
                 return us
-            ph.empty()
+                ph.empty()
             else:
                 st.error('Invalid credentials, try again.')
 def checkup(x):
