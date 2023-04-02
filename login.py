@@ -32,6 +32,7 @@ def check():
               st.write('Glucose level :',glu)
               st.write('Blood Pressure :',bp)
               import pandas as p
+              pip3 install scikit-learn
               data=open('diabetes.csv')
               from sklearn import linear_model
               mod=linear_model.LinearRegression()
