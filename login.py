@@ -3,8 +3,8 @@ import time
 usr=''
 ph=st.empty()
 records={'alice':None,'bob':None}
-def login():
   us=''
+if st.button('Go to Sign in'): 
   with ph.container():
           st.title('Login')
           USERS = {
@@ -16,15 +16,13 @@ def login():
           pas=st.text_input('Password',type='password')
           if st.button('Log in'):
               if us in USERS and pas==USERS[us]:
-                  return us
+                  ph.empty()
+                  st.success('Logged in')
+                  
 
                   
                   
               else:
                   st.error('Invalid credentials, try again.')
-usr=login()
-if usr != '':
-  ph.empty()
-  st.write('welcome',usr)
 
   
