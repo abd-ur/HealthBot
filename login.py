@@ -29,6 +29,7 @@ def checkup(x,us):
     st.success('Your records are saved.')
     x[us]=age,gen
     print(x[usr])
+usr=''
 usr=login()
 st.write(usr) 
 if usr!='':
