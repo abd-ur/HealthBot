@@ -30,8 +30,11 @@ def checkup(x,us):
     x[us]=age,gen
     print(x[usr])
 def main():
+    usr=''
     usr=login()
+    if usr!=''
     st.write(usr,'lets check')
+
     if st.button('Checkup'):
         checkup(records,usr)
 main()    
