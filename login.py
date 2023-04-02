@@ -20,6 +20,9 @@ if st.button("Send"):
     res=match(inp)
     st.text_area("LIFE:",res)
     if res=='Alright then we will proceed':
+      check()
+      res=''
+def check():        
         with ph.container():
           age=st.number_input("Enter your Age",min_value=0,max_value=150)
           gen=st.radio("Select your Gender",["Male","Female"])
