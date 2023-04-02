@@ -16,13 +16,15 @@ def login():
           pas=st.text_input('Password',type='password')
           if st.button('Log in'):
               if us in USERS and pas==USERS[us]:
-                  ph.empty()
-                  st.success('Welcome :',usr)
+                  return us
 
                   
                   
               else:
                   st.error('Invalid credentials, try again.')
 login()
+if usr != '':
+ph.empty()
+st.write('welcome',usr)
 
   
