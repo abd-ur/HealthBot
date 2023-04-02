@@ -14,8 +14,9 @@ with ph.container():
           pas=st.text_input('Password',type='password')
           if st.button('Log in'):
               if us in USERS and pas==USERS[us]:
-                  ph.empty()
                   st.success('Logged in')
+                  time.sleep(2)
+                  ph.empty()
                   
 
                   
