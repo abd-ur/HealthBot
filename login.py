@@ -23,7 +23,7 @@ with ph.container():
                   st.success('Logging in')
                   time.sleep(3)
                   ph.empty()
-                  st.title("Hi I am LIFE, your personal healthcare assistant. You can start chatting.")
+                  st.write("Hi I am LIFE, your personal healthcare assistant. You can start chatting.")
                   inp=st.text_input("You:","")
                   if st.button("Send"):
                     res=rules(inp)
