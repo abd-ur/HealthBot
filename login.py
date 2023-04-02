@@ -14,6 +14,7 @@ with ph.container():
         if st.button('Log in'):
             if us in USERS and pas==USERS[us]:
                 ph.empty()
+                st.success('Welcome',us)
             else:
                 st.error('Invalid credentials, try again.')
 
@@ -27,5 +28,4 @@ def checkup(x,us):
   if st.button('Submit'):
     st.success('Your records are saved.')
     x[us]=age,gen
-    print(x[usr])
-st.write('welcome',us)    
+    print(x[usr]) 
