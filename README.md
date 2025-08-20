@@ -26,7 +26,7 @@ A demo health assistant built with **Streamlit**, combining a chatbot, quick med
 
 Clone the repository:
 ```bash
-git clone https://github.com/your-username/life-app-streamlit.git
+git clone https://github.com/abd-ur/HealthBot.git
 cd HealthBot
 ```
 
