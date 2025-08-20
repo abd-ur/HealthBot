@@ -7,8 +7,8 @@ import numpy as np
 import streamlit as st
 
 # App Config
-st.set_page_config(page_title="LIFE – Health Care Assistant (Prototype)", page_icon="🩺", layout="centered")
-st.title("🩺 Hi, I am LIFE – your personal health care assistant (Prototype)")
+st.set_page_config(page_title="HealthBot – Health Care Assistant (Prototype)", page_icon="🩺", layout="centered")
+st.title("🩺 Hi, I am HealthBot – your personal health care assistant (Prototype)")
 st.caption("For hackathon demo purposes only. This is **not** medical advice.")
 
 # Utilities
@@ -238,3 +238,4 @@ with screen_tab:
             
 # Footer
 st.caption("© Hackathon Prototype – Built with Streamlit, Scikit‑Learn, and optional TensorFlow.")
+
